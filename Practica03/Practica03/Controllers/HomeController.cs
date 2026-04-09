@@ -13,18 +13,15 @@ namespace Practica03.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Abonos()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Principal()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
+
     }
 }

@@ -1,9 +1,11 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
+﻿@model Practica03.Models.AbonosModel
 
-    <p>Use this area to provide additional information.</p>
-</main>
+
+@{
+    ViewData["Title"] = "Abonos";
+    Layout = "~/Views/Shared/_LayoutExterno.cshtml";
+}
+
+<div class="card shadow-sm p-4" style="min-width: 400px;">
+    <h3 class="text-center mb-3">Gestión de Abonos</h3>
+</div>
