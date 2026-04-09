@@ -27,6 +27,6 @@ CREATE TABLE AbonosTB (
     Fecha DATETIME NOT NULL DEFAULT GETDATE(),
     MontoAbono DECIMAL(10,2) NOT NULL,
 
-    CONSTRAINT FK_Abonos_Principal
-        FOREIGN KEY (IdCompra) REFERENCES Principal(IdCompra)
+    CONSTRAINT FK_AbonosTB_PrincipalTB
+        FOREIGN KEY (IdCompra) REFERENCES PrincipalTB(IdCompra)
 );
