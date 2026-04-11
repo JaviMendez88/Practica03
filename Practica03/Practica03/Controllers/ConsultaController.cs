@@ -1,4 +1,5 @@
-﻿using Practica03.Models;
+﻿using Practica03.EntityFramework;
+using Practica03.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,34 +12,16 @@ namespace Practica03.Controllers
     public class ConsultaController : Controller
     {
 
+        Practica03DBEntities db = new Practica03DBEntities();
+
         public ActionResult Index()
         {
-            // Temporal mientras se construye la BD
-
-            var compras = new List<PrincipalModel>
-        {
-            new PrincipalModel
-            {
-                IdCompra = 1,
-                Descripcion = "Compra 1",
-                Saldo = 500,
-                Estado = "Pendiente"
-            },
-            new PrincipalModel
-            {
-                IdCompra = 2,
-                Descripcion = "Compra 2",
-                Saldo = 0,
-                Estado = "Cancelado"
-            }
-        };
-
-            var ordenado = compras
+            var compras = db.PrincipalTB
                 .OrderBy(c => c.Estado == "Pendiente" ? 0 : 1)
                 .ToList();
 
-            return View(ordenado);
+            return View(compras);
         }
-    }
 
+    }
 }

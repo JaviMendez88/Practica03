@@ -1,3 +1,69 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+
+        <!-- HERO / HEADER -->
+        <div class="card shadow-sm p-5 mb-4 text-center bg-light">
+            <h1 class="mb-3">Bienvenidos a QuickPay</h1>
+            <p class="lead text-muted">
+                Sistema de gestión de pagos para tus compras. Registra tus abonos y mantén un control total sobre tus finanzas.
+            </p>
+        </div>
+
+        <!-- CARDS -->
+        <div class="row text-center">
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <i class="bi bi-wallet2 fs-1 text-primary"></i>
+                        <h5 class="card-title mt-3">Abonos</h5>
+                        <p class="card-text">
+                            Registra los pagos realizados por tus compras.
+                        </p>
+                        <a href="@Url.Action("Create","Abonos")" class="btn btn-primary">
+                            Ir a Abonos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <i class="bi bi-card-list fs-1 text-success"></i>
+                        <h5 class="card-title mt-3">Compras</h5>
+                        <p class="card-text">
+                            Visualiza tus compras y el estado de saldos pendientes.
+                        </p>
+                        <a href="@Url.Action("Index","Consulta")" class="btn btn-success">
+                            Ver Compras
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <i class="bi bi-info-circle fs-1 text-secondary"></i>
+                        <h5 class="card-title mt-3">Información</h5>
+                        <p class="card-text">
+                            Práctica 03 – Programación Avanzada.
+                        </p>
+                        <button class="btn btn-outline-secondary" disabled>
+                            Grupo 4
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

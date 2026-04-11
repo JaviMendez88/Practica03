@@ -13,15 +13,5 @@ namespace Practica03.Controllers
             return View();
         }
 
-        public ActionResult Abonos()
-        {
-            return View();
-        }
-
-        public ActionResult Principal()
-        {
-            return View();
-        }
-
     }
 }
