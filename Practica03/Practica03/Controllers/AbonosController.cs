@@ -31,16 +31,18 @@ namespace Practica03.Controllers
         }
 
 
+
         [HttpPost]
         public ActionResult Create(AbonosTB abono)
         {
+            abono.Fecha = DateTime.Now;
+
             var compra = db.PrincipalTB.Find(abono.IdCompra);
 
             if (abono.MontoAbono > compra.Saldo)
             {
                 ModelState.AddModelError("", "El abono no puede ser mayor al saldo");
 
-                // Recarga del dropdown de compras pendientes
                 var comprasPendientes = db.PrincipalTB
                     .Where(c => c.Estado == "Pendiente")
                     .ToList();
@@ -63,6 +65,5 @@ namespace Practica03.Controllers
 
             return RedirectToAction("Index", "Consulta");
         }
-
     }
 }
