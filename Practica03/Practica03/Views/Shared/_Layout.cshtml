@@ -10,6 +10,11 @@
     <link href="~/Assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="~/Assets/css/main.css" rel="stylesheet" />
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/dist/jquery.validate.unobtrusive.min.js"></script>
+
     @RenderSection("Styles", required: false)
 </head>
 
@@ -25,10 +30,8 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="@Url.Action("Index","Home")" class="active">Home</a></li>
-                    <li><a href="@Url.Action("Index","Consulta")">Consulta</a></li>
-                    <li><a href="@Url.Action("Create","Abonos")">Registro</a></li>
-                    @*<li><a href="@Url.Action("Abonos","Home")">Abonos</a></li>
-                    <li><a href="@Url.Action("Principal","Home")">Compras</a></li>*@
+                    <li><a href="@Url.Action("Index","Consulta")">Compras</a></li>
+                    <li><a href="@Url.Action("Create","Abonos")">Registro de Abonos</a></li>
 
                 </ul>
             </nav>

@@ -2,10 +2,10 @@
 
 @{
     ViewData["Title"] = "Abonos";
-    Layout = "~/Views/Shared/_LayoutExterno.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div class="card shadow-sm p-4" style="min-width: 400px;">
+<section class="d-flex justify-content-center mt-5">
+<div class="card shadow-sm p-4" style="width: 450px;">
     <h3 class="text-center mb-3">Gestión de Abonos</h3>
 
     @using (Html.BeginForm("Create", "Abonos", FormMethod.Post))
@@ -17,7 +17,7 @@
 
         <div class="mb-3">
             <label>Saldo Anterior</label>
-            <input type="text" id="SaldoAnterior" class="form-control" readonly />
+            <input type="text" id="SaldoAnterior" class="form-control SoloLectura" readonly />
         </div>
 
         <div class="mb-3">
@@ -28,5 +28,6 @@
         <button type="submit" class="btn btn-primary w-100">Abonar</button>
     }
 </div>
+</section>
 
 <script src="~/Assets/js/Compras.js"></script>
